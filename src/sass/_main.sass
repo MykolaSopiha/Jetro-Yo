@@ -1,0 +1,407 @@
+header 
+	.container-fluid 
+		background-color: $var_pink
+
+.page-header 
+	margin: 0 auto
+	padding: 0 10px
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	max-width: 960px
+	height: 78px
+	background-color: #fdfdfd
+
+.logo
+	font-family: "BebasBold", sans-serif
+	font-size: 48px
+	font-weight: bold
+	color: $var_pink
+	text-transform: uppercase
+	line-height: 78px
+	strong
+		color: $var_red
+	&--inline
+		display: inline-block
+
+.page-name
+	margin: 0 auto
+	padding: 0 10px
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	height: 60px
+	max-width: 960px
+	background-color: white
+	h2
+		width: 100%
+		padding-left: 17px
+		font-family: "BebasBold", sans-serif
+		font-size: 30px
+		font-weight: bold
+		color: white
+		background-color: $var_red
+		text-align: left
+		text-transform: uppercase
+		line-height: 60px
+		vertical-align: middle
+
+
+/*RESPONSIVE NAVBAR*/
+.nav
+	padding-bottom: 30px
+	&__main
+		padding: 0
+		ul
+			list-style-type: none
+			margin: 0
+			padding: 0
+			text-align: center
+		li
+			display: inline-block
+			&:last-child
+				border-right: none;
+		.current a
+			color: #e8603c
+			&:hover
+				color: #fff
+		a
+			display: block
+			padding: 0px 30px
+			font-family: "BebasBold", sans-serif
+			font-size: 20px
+			font-weight: bold
+			color: #b9b9b9
+			text-decoration: none
+			text-transform: uppercase
+			line-height: 78px
+			vertical-align: middle
+			transition: 0.25s
+			&:hover
+				background-color: #e8603c
+				color: #fff
+		+r(720)
+			display: none !important
+
+	&__trigger
+		display: none
+		text-align: center
+		span
+			display: inline-block
+			padding: 0px 30px
+			font-family: "BebasBold", sans-serif
+			font-size: 24px
+			font-weight: bold
+			color: #e8603c
+			text-transform: uppercase
+			line-height: 77px
+			vertical-align: middle
+			cursor: pointer
+			text-transform: uppercase
+			transition: 0.5s
+			&:after
+				display: inline-block
+				margin-left: 10px
+				width: 20px
+				height: 10px
+				font-family: "FontAwesome"
+				content: "\f0c9"
+			&:hover
+				background-color: #e6002d
+		.open
+			margin-top: -2px
+			background-color: #e6002d
+			padding: 0px 10px 0px 80px
+			transition: 0.5s
+		+r(720)
+			display: block !important
+
+	&__mobile
+		position: relative
+		display: none
+		z-index: 99
+		ul
+			display: none
+			list-style-type: none
+			position: absolute
+			left: 0
+			right: 0
+			margin-left: auto
+			margin-right: auto
+			text-align: center
+			background-color: #e6002d
+		li
+			display: block
+			padding: 5px 0
+			margin: 0 5px
+			border-bottom: solid 1px #cc0028
+			&:last-child
+				border-bottom: none
+		a
+			display: block
+			padding: 10px 30px
+			color: #b9b9b9
+			font-family: "BebasBold", sans-serif
+			font-size: 20px
+			font-weight: bold
+			color: #b9b9b9
+			text-decoration: none
+			text-transform: uppercase
+			&:hover
+				background-color: #e6002d
+				color: #fff
+		+r(720)
+			display: block !important
+
+.page-content
+	margin: 0 auto
+	max-width: 960px
+	padding: 24px 10px 40px 10px
+	display: grid
+	grid-template-columns: 9fr 3fr
+	+r(960)
+		display: block
+		grid-template-columns: none
+		padding-bottom: 0;
+		max-width: 100%
+
+.post
+	position: relative
+	+r(1024)
+		margin: 0 auto
+		max-width: 670px
+	&__icon
+		position: absolute
+		left: -95px
+		+r(1200)
+			display: none
+	&__media
+		position: relative
+		max-width: 670px
+	&__meta
+		padding-top: 20px
+		float: left
+		width: 150px
+		+r(640)
+			float: none
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			width: 100%
+	&__summary
+		padding-top: 20px
+		overflow: hidden
+
+.data	
+	padding: 0
+	margin: 0 0 20px 0
+	+r(640)
+		text-align: center
+	&__label
+		padding: 0 0 15px 0
+		margin: 0
+		font-family: "BebasBold", sans-serif
+		font-size: 18px
+		font-weight: bold
+		color: $var_red
+		text-transform: uppercase
+		text-decoration: none
+		&:hover
+			text-decoration: underline			
+	&__value
+		font-family: "HelveticaNeueRoman", sans-serif
+		font-size: 14px
+		color: #bababa
+		+r(640)
+			text-align: center
+
+.headline
+	a
+		font-family: "BebasBold", sans-serif
+		font-size: 22px
+		color: $var_red
+		text-align: left
+		text-transform: uppercase
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+
+.textual
+	padding-top: 20px
+	p
+		max-width: 500px
+		font-family: "HelveticaNeueRoman", sans-serif
+		font-size: 13px
+		font-weight: 400
+		font-style: normal
+		color: #414141
+		text-align: left
+		line-height: 1.5em
+		padding-bottom: 20px
+	.url
+		padding-top: 5px
+		padding-bottom: 20px
+		font-family: "HelveticaNeueRoman", sans-serif
+		font-size: 14px
+		font-weight: 400
+		font-style: normal
+		color: #a0a0a0
+	&--sidebar-text
+		p
+			padding: 0 
+			color: #464646
+.separator
+	padding: 50px 0
+	height: 14px
+	background: url(../img/sep-line.png) repeat-x;
+	background-position-y: center
+
+
+.quote
+	padding: 20px 50px 20px 50px
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	background-color: #f5f5f5
+	+r(640)
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+	&__mark
+		padding-left: 7px
+		padding-right: 20px
+		font-family: Georgia, sans-serif
+		font-size: 72px
+		color: $var_red
+		line-height: 1em
+	&__text
+		font-family: "HelveticaNeueItalic", sans-serif
+		font-size: 14px
+		font-weight: 300
+		font-style: italic
+		color: #414141
+		text-align: left
+		line-height: 1.5em
+	
+
+.paggination
+	li
+		display: inline-block
+		line-height: 26px
+		background-color: $var_pink
+		vertical-align: middle
+		transition: 0.2s
+		&:hover 
+			background-color: $var_red
+	a 
+		padding: 0 9px
+		text-decoration: none
+		font-family: "BebasRegular", sans-serif
+		font-size: 14px
+		font-weight: normal
+		font-style: normal
+		color: #fff
+		line-height: 26px
+	.current
+		background-color: $var_red
+	+r(960)
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding-bottom: 50px
+		li
+			margin: 0 5px		
+				
+.sidebar-section
+	padding-bottom: 30px
+	&__header
+		display: flex
+		flex-direction: row
+		background: url(../img/sep-line.png);
+		height: 18px
+	h4
+		padding-right: 10px
+		background-color: white
+	.h4
+		font-family: "BebasBold", sans-serif
+		font-size: 20px
+		font-weight: 700
+		font-style: bold
+		color: $var_red
+		text-transform: uppercase
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	p, a
+		font-family: "HelveticaNeueRoman", sans-serif
+		font-size: 13px
+		font-weight: 400
+		font-style: normal
+		color: #464646
+		line-height: 1.25em
+	a 
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	+r(960)
+		li
+			text-align: center
+
+.gallery
+	padding-top: 20px
+	+r(960)
+		text-align: center
+	&__pic-frame
+		display: inline-block
+		background-color: $var_pink
+		border: 1px solid $var_red
+	&--small
+		.gallery__pic-frame
+			margin: 4px
+			height: 48px
+			width: 48px
+
+footer
+	.container-fluid
+		background-color: $var_pink
+
+	.container
+		margin: 0 auto
+		padding: 0 10px
+		max-width: 960px
+		background-color: #fdfdfd
+
+.info
+	display: flex
+	flex-direction: row
+	padding: 35px
+	background-color: $var_red
+	+r(480)
+		flex-direction: column
+	&__about
+		max-width: 260px
+	h4
+		padding-bottom: 25px
+		color: #fff
+		font-family: "BebasBold", sans-serif
+		font-size: 24px
+		font-weight: 700
+		font-style: bold
+	p
+		padding-bottom: 15px
+		font-family: "HelveticaNeueRoman", sans-serif
+		font-size: 13px
+		font-weight: 400
+		font-style: normal
+		color: #fff
+		text-align: left
+		line-height: 1.25em
+	.twitter-link
+		color: $var_pink
+		cursor: pointer
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	&__twitter
+		padding-left: 60px
+		max-width: 212px

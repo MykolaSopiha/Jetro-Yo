@@ -1,0 +1,5 @@
+ProjectTitle: jetro
+
+PageList:
+- file: blog.html
+  ready: 50
