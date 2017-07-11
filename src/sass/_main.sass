@@ -156,7 +156,7 @@ header
 .page-content
 	margin: 0 auto
 	max-width: 960px
-	padding: 24px 10px 40px 10px
+	padding: 24px 10px 50px 10px
 	display: grid
 	grid-template-columns: 9fr 3fr
 	+r(960)
@@ -165,14 +165,31 @@ header
 		padding-bottom: 0;
 		max-width: 100%
 
+// .separator
+// 	padding: 50px 0
+// 	height: 14px
+// 	background: url(../img/sep-line.png) repeat-x;
+// 	background-position-y: center
+
 .post
+	padding-bottom: 50px
+	margin-bottom: 50px
 	position: relative
+	border: solid
+	border-right: 0
+	border-left: 0
+	border-top: 0
+	border-bottom-width: 14px
+	border-image: url(../img/sep-line.png) 0 0 14 0 repeat
+		&:last-of-type
+			border: none
+			padding-bottom: 0
 	+r(1024)
 		margin: 0 auto
 		max-width: 670px
 	&__icon
 		position: absolute
-		left: -95px
+		left: -85px
 		+r(1200)
 			display: none
 	&__media
@@ -238,7 +255,9 @@ header
 		text-align: left
 		line-height: 1.5em
 		padding-bottom: 20px
-	.url
+		&:last-of-type
+			padding-bottom: 0px
+	&__url
 		padding-top: 5px
 		padding-bottom: 20px
 		font-family: "HelveticaNeueRoman", sans-serif
@@ -250,11 +269,6 @@ header
 		p
 			padding: 0 
 			color: #464646
-.separator
-	padding: 50px 0
-	height: 14px
-	background: url(../img/sep-line.png) repeat-x;
-	background-position-y: center
 
 
 .quote
@@ -284,7 +298,8 @@ header
 		line-height: 1.5em
 	
 
-.paggination
+.pagination-list
+	margin-top: 50px
 	li
 		display: inline-block
 		line-height: 26px
@@ -396,7 +411,7 @@ footer
 		color: #fff
 		text-align: left
 		line-height: 1.25em
-	.twitter-link
+	&__twitter-link
 		color: $var_pink
 		cursor: pointer
 		text-decoration: none
