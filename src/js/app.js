@@ -1,7 +1,4 @@
-import 'lightbox2';
-import slickInit from './lib/slickInit.js';
-
-slickInit('.js-slider');
+import './lib/pluginsinit.js';
 
 
 // RESPONSIVE MENU begin

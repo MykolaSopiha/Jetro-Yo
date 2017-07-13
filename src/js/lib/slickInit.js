@@ -1,10 +1,11 @@
 import 'slick-carousel';
 
+// plugins initialization begin
 function slickInit(arg) {
-	// "each(fun(...))" - for the case when there are few sliders on the same page
+
+	// --- slick.js initialization begin ---
 	$(arg).each(function (idx, item) {
 	    var carouselId = "carousel" + idx;
-
 	    $(this).find('.slider__items').id = carouselId + "items";
 	    $(this).find('.slider__arrow-prev').id = carouselId + "arrow-prev";
 	    $(this).find('.slider__arrow-next').id = carouselId + "arrow-next";
@@ -14,7 +15,7 @@ function slickInit(arg) {
 			nextArrow: $(this).find('.slider__arrow-next')
 	    });
 	});
+	// --- slick.js initialization end ---
 }
-
 
 module.exports = slickInit;
