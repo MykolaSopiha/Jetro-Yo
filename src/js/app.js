@@ -1,3 +1,10 @@
+import 'lightbox2';
+import slickInit from './lib/slickInit.js';
+
+slickInit('.js-slider');
+
+
+// RESPONSIVE MENU begin
 $(document).ready(function(){
     $(".nav__mobile").html($(".nav__main").html());
     $(".nav__trigger span").click(function(){
@@ -10,3 +17,4 @@ $(document).ready(function(){
         }
     });
 });
+// RESPONSIVE MENU end

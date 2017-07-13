@@ -4,6 +4,7 @@ header
 
 .page-header 
 	margin: 0 auto
+	min-margin
 	padding: 0 10px
 	display: flex
 	flex-direction: row
@@ -11,18 +12,23 @@ header
 	max-width: 960px
 	height: 78px
 	background-color: #fdfdfd
+	+r(992)
+		padding: 0 25px
 
 .logo
+	padding-top: 3px
 	font-family: "BebasBold", sans-serif
-	font-size: 48px
+	font-size: 46px
 	font-weight: bold
 	color: $var_pink
 	text-transform: uppercase
 	line-height: 78px
+	letter-spacing: 0.04em
 	strong
 		color: $var_red
 	&--inline
 		display: inline-block
+
 
 .page-name
 	margin: 0 auto
@@ -34,8 +40,9 @@ header
 	max-width: 960px
 	background-color: white
 	h2
+		padding-top: 1px
+		padding-left: 18px
 		width: 100%
-		padding-left: 17px
 		font-family: "BebasBold", sans-serif
 		font-size: 30px
 		font-weight: bold
@@ -44,8 +51,8 @@ header
 		text-align: left
 		text-transform: uppercase
 		line-height: 60px
+		letter-spacing: 0.03em
 		vertical-align: middle
-
 
 /*RESPONSIVE NAVBAR*/
 .nav
@@ -63,11 +70,9 @@ header
 				border-right: none;
 		.current a
 			color: #e8603c
-			&:hover
-				color: #fff
 		a
 			display: block
-			padding: 0px 30px
+			padding: 5px 0px 0px 22px
 			font-family: "BebasBold", sans-serif
 			font-size: 20px
 			font-weight: bold
@@ -77,9 +82,10 @@ header
 			line-height: 78px
 			vertical-align: middle
 			transition: 0.25s
+			letter-spacing: 0.04em
 			&:hover
-				background-color: #e8603c
-				color: #fff
+				color: #e8603c
+				text-decoration: underline
 		+r(720)
 			display: none !important
 
@@ -172,8 +178,8 @@ header
 // 	background-position-y: center
 
 .post
-	padding-bottom: 50px
-	margin-bottom: 50px
+	padding-bottom: 47px
+	margin-bottom: 56px
 	position: relative
 	border: solid
 	border-right: 0
@@ -185,7 +191,7 @@ header
 			border: none
 			padding-bottom: 0
 	+r(1024)
-		margin: 0 auto
+		margin: 0 auto 50px auto
 		max-width: 670px
 	&__icon
 		position: absolute
@@ -198,7 +204,7 @@ header
 	&__meta
 		padding-top: 20px
 		float: left
-		width: 150px
+		width: 147px
 		+r(640)
 			float: none
 			display: flex
@@ -209,16 +215,33 @@ header
 		padding-top: 20px
 		overflow: hidden
 
+.slider
+	&__arrow-prev
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 18px
+	&__arrow-next
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 18px
+
+
+.slider-item
+	img
+		width: 100%
+
 .data	
-	padding: 0
-	margin: 0 0 20px 0
+	padding: 2px 0 0 0
+	margin: 0 0 8px 0
 	+r(640)
 		text-align: center
 	&__label
-		padding: 0 0 15px 0
+		padding: 0
 		margin: 0
 		font-family: "BebasBold", sans-serif
-		font-size: 18px
+		font-size: 16px
 		font-weight: bold
 		color: $var_red
 		text-transform: uppercase
@@ -226,8 +249,9 @@ header
 		&:hover
 			text-decoration: underline			
 	&__value
+		padding-top: 1px
 		font-family: "HelveticaNeueRoman", sans-serif
-		font-size: 14px
+		font-size: 12px
 		color: #bababa
 		+r(640)
 			text-align: center
@@ -240,21 +264,22 @@ header
 		text-align: left
 		text-transform: uppercase
 		text-decoration: none
+		letter-spacing: 0.035em
 		&:hover
 			text-decoration: underline
 
 .textual
-	padding-top: 20px
+	padding-top: 12px
 	p
-		max-width: 500px
+		max-width: 505px
 		font-family: "HelveticaNeueRoman", sans-serif
 		font-size: 13px
 		font-weight: 400
 		font-style: normal
 		color: #414141
 		text-align: left
-		line-height: 1.5em
-		padding-bottom: 20px
+		line-height: 1.4em
+		padding-bottom: 18px
 		&:last-of-type
 			padding-bottom: 0px
 	&__url
@@ -270,7 +295,6 @@ header
 			padding: 0 
 			color: #464646
 
-
 .quote
 	padding: 20px 50px 20px 50px
 	display: flex
@@ -281,6 +305,7 @@ header
 		display: flex
 		flex-direction: column
 		justify-content: flex-start
+		padding: 20px
 	&__mark
 		padding-left: 7px
 		padding-right: 20px
@@ -320,13 +345,19 @@ header
 	.current
 		background-color: $var_red
 	+r(960)
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
+		display: flex
+		flex-direction: row
+		justify-content: center
 		padding-bottom: 50px
 		li
 			margin: 0 5px		
-				
+
+.sidebar
+	padding: 0 5px
+	+r(960)
+		max-width: 670px
+		margin: 0 auto
+			
 .sidebar-section
 	padding-bottom: 30px
 	&__header
@@ -334,10 +365,9 @@ header
 		flex-direction: row
 		background: url(../img/sep-line.png);
 		height: 18px
-	h4
+	.h4
 		padding-right: 10px
 		background-color: white
-	.h4
 		font-family: "BebasBold", sans-serif
 		font-size: 20px
 		font-weight: 700
@@ -372,9 +402,12 @@ header
 		border: 1px solid $var_red
 	&--small
 		.gallery__pic-frame
-			margin: 4px
+			margin: 3px
 			height: 48px
 			width: 48px
+		img
+			width: 46px
+			height: 46px
 
 footer
 	.container-fluid
