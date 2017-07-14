@@ -221,11 +221,18 @@ header
 		top: 50%
 		transform: translateY(-50%)
 		left: 18px
+		i
+			font-size: 56px
+			color: #fff
 	&__arrow-next
 		position: absolute
 		top: 50%
 		transform: translateY(-50%)
 		right: 18px
+		i
+			font-size: 52px
+			color: #fff
+
 
 
 .slider-item
@@ -342,7 +349,7 @@ header
 		font-style: normal
 		color: #fff
 		line-height: 26px
-	.current
+	.is-current
 		background-color: $var_red
 	+r(960)
 		display: flex
@@ -402,7 +409,7 @@ header
 		border: 1px solid $var_red
 	&--small
 		.gallery__pic-frame
-			margin: 3px
+			margin: 2px
 			height: 48px
 			width: 48px
 		img
@@ -424,32 +431,48 @@ footer
 	flex-direction: row
 	padding: 35px
 	background-color: $var_red
-	+r(480)
-		flex-direction: column
-	&__about
-		max-width: 260px
 	h4
-		padding-bottom: 25px
+		padding-bottom: 15px
 		color: #fff
 		font-family: "BebasBold", sans-serif
 		font-size: 24px
 		font-weight: 700
 		font-style: bold
-	p
-		padding-bottom: 15px
+	+r(480)
+		flex-direction: column
+	&__about
+		max-width: 281px
 		font-family: "HelveticaNeueRoman", sans-serif
 		font-size: 13px
 		font-weight: 400
 		font-style: normal
 		color: #fff
 		text-align: left
-		line-height: 1.25em
-	&__twitter-link
+		p
+			margin-bottom: 12px	
+			line-height: 1.25em
+	&__twitter
+		padding-left: 60px
+		+r(480)
+			margin-top: 30px
+			padding-left: 0
+
+
+.tweet
+	padding-bottom: 15px
+	max-width: 212px
+	font-family: "HelveticaNeueRoman", sans-serif
+	font-size: 13px
+	font-weight: 400
+	font-style: normal
+	color: #fff
+	text-align: left
+	line-height: 1.25em
+	&__auth, &__date
 		color: $var_pink
 		cursor: pointer
 		text-decoration: none
 		&:hover
 			text-decoration: underline
-	&__twitter
-		padding-left: 60px
-		max-width: 212px
+	&__date
+		margin-top: 5px
